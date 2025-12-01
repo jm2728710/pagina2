@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sistema de Autenticación - Demo</title>
+<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <!-- TÍTULO PRINCIPAL -->
+  <h1>Sistema de Autenticación</h1>
+
+  <div class="container">
+    <!-- Registro -->
+    <div class="card">
+      <h2>Registro - Crear cuenta</h2>
+      <div id="regMsg" class="hint"></div>
+
+      <label>Nombre completo
+        <input id="regName" type="text" placeholder="Ej: Ana Pérez" />
+      </label>
+
+      <label>Correo (usuario)
+        <input id="regEmail" type="email" placeholder="correo@ejemplo.com" />
+      </label>
+
+      <label>Número de móvil
+        <input id="regPhone" type="tel" placeholder="+59171234567" />
+      </label>
+
+      <label>Contraseña
+        <div class="inline">
+          <input id="regPassword" type="password" placeholder="Mín 8, mayúscula, minúscula, número, símbolo" />
+          <input id="regShow" type="checkbox" title="Mostrar contraseña" />
+          <label for="regShow" class="muted">Mostrar</label>
+        </div>
+      </label>
+
+      <div class="hint">La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial.</div>
+
+      <button id="btnRegister">Registrar</button>
+      <div id="regFeedback" class="small"></div>
+    </div>
+
+    <!-- Login -->
+    <div class="card">
+      <h2>Inicio de sesión</h2>
+      <div id="loginMsg" class="hint"></div>
+
+      <label>Correo (usuario)
+        <input id="loginEmail" type="email" placeholder="correo@ejemplo.com" />
+      </label>
+
+      <label>Contraseña
+        <div class="inline">
+          <input id="loginPassword" type="password" />
+          <input id="loginShow" type="checkbox" />
+          <label for="loginShow" class="muted">Mostrar</label>
+        </div>
+      </label>
+
+      <button id="btnLogin">Iniciar sesión</button>
+      <div id="loginFeedback" class="small"></div>
+
+      <span id="recoverLink" class="link" style="display:none">Recuperar contraseña</span>
+    </div>
+
+    <!-- Recuperación -->
+    <div class="card fullwidth">
+      <h2>Recuperación de contraseña</h2>
+      <div id="recMsg" class="hint">Ingrese su correo y la nueva contraseña.</div>
+
+      <label>Correo (usuario)
+        <input id="recEmail" type="email" placeholder="correo@ejemplo.com" />
+      </label>
+
+      <label>Nueva contraseña
+        <div class="inline">
+          <input id="recPassword" type="password" />
+          <input id="recShow" type="checkbox" />
+          <label for="recShow" class="muted">Mostrar</label>
+        </div>
+      </label>
+
+      <button id="btnRecover">Actualizar contraseña</button>
+      <div id="recFeedback" class="small"></div>
+    </div>
+
+    <!-- Zona información / pruebas -->
+    <div class="card fullwidth">
+      <h2>Información & notas (comentarios en el código)</h2>
+      <p class="hint">Este demo guarda usuarios en <code>localStorage</code> (solo para pruebas). Los puntos importantes y explicación de las expresiones regulares, manejo de bloqueo, validación y actualización están documentados en los comentarios del código fuente (abajo).</p>
+      <p class="muted">Para usar: abra este archivo en su navegador. Puede registrar, intentar iniciar sesión (3 intentos fallidos bloquean), y recuperar contraseña para desbloquear.</p>
+    </div>
+  </div>
+<script src="script/script.js"></script>
+</body>
+</html>
